@@ -8,25 +8,26 @@ import pyfiglet
 console = Console()
 
 PRIMARY = "#b26349"
+PROJECT_NAME = 'MEDIA AGENT'
 
 def display_intro(): 
 
     console.print()
     console.print(
         Panel.fit(
-            f"[bold white]* Welcome to [{PRIMARY}]MEDIA AGENT[/{PRIMARY}] *[/bold white]",
+            f"[bold white]* Welcome to [{PRIMARY}]{PROJECT_NAME}[/{PRIMARY}] *[/bold white]",
             border_style=PRIMARY,
             padding=(0, 2),
         )
     )
 
     # Banner
-    banner = pyfiglet.figlet_format("MEDIA AGENT", font="ansi_shadow", width=200) 
+    banner = pyfiglet.figlet_format(PROJECT_NAME, font="ansi_shadow", width=200) 
     console.print()
     console.print(banner, style=f"{PRIMARY} bold")
     # console.print(Rule(style="#b26349"))
 
-    welcome_text = """[bold cyan]Welcome to MEDIA AGENT[/bold cyan]
+    welcome_text = f"""[bold cyan]Welcome to {PROJECT_NAME}[/bold cyan]
 
 This tool helps you:
 🔎 Search Twitter & Reddit  
